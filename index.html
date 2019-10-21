@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>EON Test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+
+#grad{
+height:100%;
+background-image: -webkit-linear-gradient(top left, #1C3763, #BB3B56);
+                  -moz-linear-gradient(top left, #1C3763, #BB3B56);
+                  -ms-linear-gradient(top left, #1C3763, #BB3B56);
+                  -o-linear-gradient(top left, #1C3763, #BB3B56);
+}
+
+h1{
+ color: #FFF;
+ font-family: NotoSerif;
+ float: 100%;
+ margin:8px
+}
+
+img{
+ width:100%;
+ margin:0
+}
+
+.container{
+ position: absolute;
+ right:16%;
+ top: 32%;
+ margin:25px;
+ max-width: 350px;
+}
+
+input[type=email], input[type=password] {
+ width: 375px;
+ color:#FFF;
+ padding: 20px;
+ margin: 0px;
+ border: 2px solid #FFF;
+ border-radius: 50px;
+ font-family:Open Sans;
+ background:0
+}
+
+.form-control::placeholder{
+ color:#FFF;
+ font-family: Open Sans;
+ font-weight: 500;
+ }
+
+
+.btn {
+ background-color: #1C3763;
+ color: #FFF;
+ padding: 12px 12px;
+ border-radius: 30px;
+ border:0;
+ cursor: pointer;
+ font-family: Open Sans;
+ font-weight: bold;
+ width: 375px;
+}
+
+a{
+ position: relative;
+ left:80%;
+ top:84%;
+ margin:10px;
+ diplay: block;
+ color: #FFF;
+ font-family: Titilium Web;
+ text-decoration: underline
+}
+
+#link2{
+ position: absolute;
+ left: 84%;
+ width: 100%;
+ text-decoration: underline
+}
+
+.text{
+font-family: Titilium Web;
+position:relative;
+left:48%;
+top: -14px;  
+color: #FFF
+}
+
+@media screen and (max-width: 600px){
+
+
+.form-control::placeholder{
+color:#1C3763; 
+}
+
+input[type=email], input[type=password] {
+border: 2px solid #1C3763;
+color:#1C3763
+}
+
+a{
+color:#1C3763;
+}
+
+#link2{
+color:#1C3763;
+}
+
+.text{
+color:#1C3763;
+}
+
+</style>
+
+<script src="https://kit.fontawesome.com/39c3751a4b.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div id="grad">
+
+<div class="row">
+
+<img src='https://gitlab.com/farid4/ux-designer-assignment/raw/master/user.png' alt='provided by eon'>
+
+<div class="container">
+<h1>Sign In</h1>
+<form action="" class="needs-validation" novalidate>
+<div class="form-group">
+<input type="email" class="form-control" id="email" placeholder="EMAIL*" name="email" required>
+<div class="no-feedback"></div>
+<div class="invalid-feedback">Please provide a valid email</div>
+</div>
+<div class="form-group">
+<input type="password" class="form-control" id="pswd" placeholder="PASSWORD*" name="pswd" required>
+<div class="no-feedback"></div>
+<div class="invalid-feedback">Key in your Password</div>
+</div>
+<button type="submit" class="btn btn-primary">NEXT<i class="fas fa-long-arrow-alt-right"></i></button>
+
+</button>
+<div class="form-group">
+<a href="#" target="_blank">Forgot Password</a>
+</div>
+<span class="text">Not a member yet? -</span><a id="link2" href="" target="_blank">Start for Free</a>
+
+<script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
+</body>
+</html>
